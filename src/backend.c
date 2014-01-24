@@ -1288,7 +1288,7 @@ acl_fetch_connslots(struct proxy *px, struct session *l4, void *l7, int dir,
 			iterator = iterator->next;
 			continue;
 		}
-		if (iterator->maxconn == 0 || iterator->maxqueue == 0) {
+		if (iterator->maxconn == 0) {
 			test->i = -1;
 			return 1;
 		}
